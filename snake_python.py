@@ -72,9 +72,9 @@ while key != 27:                                                   # While Esc k
             wall = [randint(1, 18), randint(1, 58)]
             walls.append(wall)               # Calculating next food's coordinates
             if food in snake: food = []
-            if wall in snake: wall = []
+            if wall in snake: walls = []
         win.addch(food[0], food[1], '*')
-        win.addch(wall[0], wall[1], '@')
+        win.addch(walls[0], walls[1], '@')
     else:    
         last = snake.pop()                                          # [1] If it does not eat the food, length decreases
         win.addch(last[0], last[1], ' ')
